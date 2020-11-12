@@ -1,7 +1,7 @@
 .form {
   padding-top: 40px;
   padding-bottom: 30px;
-  margin-bottom: 67px;
+  margin-bottom: 69px;
   background-color: $background;
 
   @media (max-width: $desktop) {
@@ -147,7 +147,7 @@
   }
 
   &--option {
-    grid-area: option;
+    width: 100%;
   }
 
   &:last-of-type {
@@ -192,7 +192,7 @@
   @include fields();
   @include font(14px, 14px, 400);
   position: relative;
-  padding: 15px 15px 15px 25px;
+  padding: 16px 15px 16px 25px;
   width: 100%;
   font-family: $arial;
   color: $input;
@@ -267,8 +267,10 @@
   }
 }
 
-.form__inputs label {
+.form__select-label {
   position: relative;
+  width: 100%;
+  grid-area: option;
 
   &::after {
     position: absolute;

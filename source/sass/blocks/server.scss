@@ -5,9 +5,10 @@
 
   @media (max-width: $desktop) {
     @include mobile();
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 }
+
 .server__title {
   @include fields();
   @include font(28px, 36px, 400);
