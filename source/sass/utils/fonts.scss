@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Consolas";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Consolas"),
+    local("Consolas-Regular"),
+    url("../fonts/consolas.woff2") format("woff2"),
+    url("../fonts/consolas.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Consolas";
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Consolas Bold"),
+    local("Consolas-Bold"),
+    url("../fonts/consolasbold.woff2") format("woff2"),
+    url("../fonts/consolasbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arial";
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+  src: local("Arial italic"),
+    local("Arial-italic"),
+    url("../fonts/arial-italic.woff2") format("woff2"),
+    url("../fonts/arial-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arial";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Arial"),
+    local("Arial-Regular"),
+    url("../fonts/arial.woff2") format("woff2"),
+    url("../fonts/arial.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arial";
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Arial Bold"),
+    local("Arial-Bold"),
+    url("../fonts/arialbold.woff2") format("woff2"),
+    url("../fonts/arialbold.woff") format("woff");
+}
+@font-face {
+  font-family: "Helvetica";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Helvetica"),
+    local("Helvetica-Regular"),
+    url("../fonts/helvetica.woff2") format("woff2"),
+    url("../fonts/helvetica.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+  src: local("Open Sans"),
+    local("Open-Sans"),
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+}

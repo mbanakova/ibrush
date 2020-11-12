@@ -1,0 +1,284 @@
+.form {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-bottom: 67px;
+  background-color: $background;
+
+  @media (max-width: $desktop) {
+    margin-bottom: 48px;
+  }
+}
+
+.form__form {
+  @include desktop();
+
+  @media (max-width: $desktop) {
+    @include mobile();
+  }
+}
+
+.form__unit {
+  &:first-of-type {
+    margin-bottom: 40px;
+
+    @media (max-width: $desktop) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.form__title {
+  @include font(18px, 18px, 700);
+  font-family: $consolas;
+  color: $charcoal;
+  margin-bottom: 15px;
+
+  @media (max-width: $desktop) {
+    &--small {
+      @include font(16px, 18px, 700);
+    }
+  }
+}
+
+.form__stars {
+  position: relative;
+  width: 125px;
+  height: 25px;
+  background-image: url("../img/star-grey.svg");
+  background-size: 25px 25px;
+  background-repeat: repeat-x;
+
+  &:focus-within {
+    outline-offset: 1px;
+  }
+}
+
+.form__star {
+  @include fields();
+  appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  font-size: inherit;
+  background-repeat: repeat-x;
+
+  &:nth-last-of-type(1) {
+    z-index: 5;
+    width: 25px;
+  }
+
+  &:nth-last-of-type(2) {
+    z-index: 4;
+    width: 50px;
+  }
+
+  &:nth-last-of-type(3) {
+    z-index: 3;
+    width: 75px;
+  }
+
+  &:nth-last-of-type(4) {
+    z-index: 2;
+    width: 100px;
+  }
+
+  &:nth-last-of-type(5) {
+    z-index: 1;
+    width: 125px;
+  }
+
+  &:checked,
+  &:hover {
+    background-image: url("../img/star.svg");
+    background-size: 25px 25px;
+    transition: $ease;
+  }
+}
+
+.form__inputs {
+  position: relative;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-areas:
+  "name email option"
+  "textarea textarea textarea"
+  ;
+  grid-template-columns: 210px 210px 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 30px;
+
+  @media (max-width: $desktop) {
+    margin-top: 22px;
+    margin-bottom: 23px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-row-gap: 10px;
+  }
+}
+
+.form__input {
+  @include fields();
+  @include font(14px, 14px, 400);
+  position: relative;
+  padding: 13px 15px 15px;
+  font-family: $arial;
+  color: $input;
+  cursor: pointer;
+
+  &::placeholder {
+    color: $placeholder;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $focus;
+    transition: $ease;
+  }
+
+  &--name {
+    grid-area: name;
+  }
+
+  &--email {
+    grid-area: email;
+  }
+
+  &--option {
+    grid-area: option;
+  }
+
+  &:last-of-type {
+    padding: 13px 60px 15px 15px;
+  }
+
+  @media (max-width: $desktop) {
+    flex-grow: 1;
+    padding: 16px 15px 13px 15px;
+  }
+}
+
+.form__select-container {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 290px;
+  background-color: $white;
+  box-shadow: 0px 2px 15px rgba(154, 154, 154, 0.5);
+  border-radius: 2px;
+
+  &--active {
+    display: block;
+  }
+
+  @media (max-width: $desktop) {
+    width: 280px;
+    top: 174px;
+  }
+}
+
+.form__option {
+  visibility: hidden;
+  position: absolute;
+  top: -2px;
+  width: 1px;
+  height: 1px;
+}
+
+.form__select-item {
+  @include fields();
+  @include font(14px, 14px, 400);
+  position: relative;
+  padding: 15px 15px 15px 25px;
+  width: 100%;
+  font-family: $arial;
+  color: $input;
+  cursor: pointer;
+
+  &::before {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $accent;
+  }
+
+  &:hover {
+    background-color: $background;
+
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.form__textarea {
+  @include fields();
+  @include font(14px, 14px, 400);
+  min-height: 120px;
+  resize: none;
+  grid-area: textarea;
+  padding: 18px 15px;
+  width: 100%;
+  font-family: $arial;
+  color: $input;
+  cursor: pointer;
+
+  &::placeholder {
+    color: $placeholder;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $focus;
+    transition: $ease;
+  }
+
+  @media (max-width: $desktop) {
+    margin-top: 10px;
+    min-height: 150px;
+  }
+}
+
+.form__submit {
+  @include button();
+  padding: 17px;
+  min-width: 210px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($accent, 0.8);
+    transition: $ease;
+  }
+
+  &:active {
+    background-color: rgba($accent, 0.9);
+    transition: $ease;
+  }
+
+  @media (max-width: $desktop) {
+    width: 100%;
+  }
+}
+
+.form__inputs label {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/select.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 50px;
+  }
+}

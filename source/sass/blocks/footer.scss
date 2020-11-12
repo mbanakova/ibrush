@@ -1,0 +1,30 @@
+.footer {
+  font-family: $consolas;
+  color: $dark;
+}
+
+.footer__wrapper {
+  @include desktop();
+
+  @media (max-width: $desktop) {
+    @include mobile();
+  }
+}
+
+.footer__title {
+  @include fields();
+  @include font(28px, 28px, 400);
+  margin-bottom: 40px;
+
+  @media (max-width: $desktop) {
+    @include font(23px, 28px, 400);
+  }
+}
+
+.footer__slider {
+  margin-bottom: 88px;
+
+  @media (max-width: $desktop) {
+    margin-bottom: 60px;
+  }
+}

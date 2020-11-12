@@ -1,0 +1,33 @@
+.conclusion {
+  @include desktop();
+  margin-bottom: 50px;
+
+  @media (max-width: $desktop) {
+    @include mobile();
+    margin-bottom: 76px;
+  }
+}
+
+.conclusion__title {
+  @include fields();
+  @include font(28px, 36px, 700);
+  margin-bottom: 22px;
+  font-family: $consolas;
+  color: $black;
+
+  @media (max-width: $desktop) {
+    @include font(23px, 36px, 700);
+    margin-bottom: 24px;
+  }
+}
+
+.conclusion__text {
+  @include fields();
+  @include font(16px, 25px, 400);
+  font-family: $arial;
+  color: $charcoal;
+
+  @media (max-width: $desktop) {
+    @include font(14px, 25px, 400);
+  }
+}
