@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: none;
+    overflow: hidden;
   }
 }
 
@@ -61,7 +62,7 @@
   @media (max-width: $desktop) {
     max-width: 770px;
     overflow: hidden;
-    order: 1;
+    order: 2;
     margin-bottom: 19px;
   }
 }
@@ -97,6 +98,7 @@
   @media (max-width: $desktop) {
     @include font(14px, 18px, 400);
     margin-bottom: 25px;
+    order: 1;
   }
 }
 
@@ -112,7 +114,7 @@
     background-color: $range;
     border-radius: 2px;
     outline: none;
-    order: 1;
+    order: 2;
 
     &::-webkit-slider-thumb {
       appearance: none;
