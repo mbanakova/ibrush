@@ -18,7 +18,6 @@ selected.addEventListener('click', function () {
 
 optionsList.forEach(function (item) {
   item.addEventListener('click', function () {
-    console.log(selected.value)
     selected.value = item.querySelector('label').innerHTML;
     optionsContainer.classList.remove('form__select-container--active');
   })

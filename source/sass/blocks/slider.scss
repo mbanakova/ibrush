@@ -32,6 +32,13 @@
   }
 }
 
+.slider__link {
+  @include font(18px, 24px, 700);
+  text-decoration: none;
+  color: $dark;
+  font-family: $consolas;
+}
+
 .slider__img {
   margin-bottom: 12px;
 
